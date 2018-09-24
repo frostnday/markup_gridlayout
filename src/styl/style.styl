@@ -1,0 +1,56 @@
+html
+  font-size 62.5%
+
+body
+  padding 30px
+  background-color #f6f7fb
+  color #333333
+  font-size 1.2rem
+  font-family "Hiragino kaku Gothic ProN", Meiryo, sans-serif
+
+*
+  &:after, &:before
+    box-sizing border-box
+
+a
+  &:link, &:visited, &:hover, &:active
+    color #7c5119
+    text-decoration none
+
+.item
+  width 180px
+  margin-bottom 4px
+  border-bottom 3px solid
+  padding 8px
+  border-radius 5px
+  background-color #ffffff
+  > a
+    display block
+    margin -8px -8px -11px // ネガティブマージンで領域を広げる
+    padding 8px 8px 11px // ↑で広げた分、padding領域を広げる
+    border-radius inherit // 親要素の値を引き継ぐ
+    color #777777 // リンクテキストとして文字色が変わってしまうので指定し直す
+    transition all 0.3s;
+    &:hover
+      box-shadow 0 0 6px -1px rgba(0, 0, 0, 0.3)
+      opacity 0.8
+  .image
+    display block
+    width 100%
+  .category
+    margin 15px 9px 10px
+    color #aaaaaa
+    letter-spacing 1px
+    font-family "Trevuchet MS", "Hiragino kaku Gothic ProN", Meiryo, sans-serif
+    &:before
+      content ''
+      display inline-block
+      width 19px
+      height 19px
+      margin-right 5px
+      border 2px solid
+      border-radius 50%
+      vertical-align -5px
+  .description
+    margin 10px
+    line-height 1.5

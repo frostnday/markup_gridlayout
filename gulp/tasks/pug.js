@@ -13,3 +13,5 @@ gulp.task("pug", function(){
 gulp.task("pug_watch", function(){
   gulp.watch('./src/pug/*.pug', ['pug']);
 })
+
+gulp.task('default', ['pug']);
